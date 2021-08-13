@@ -1,0 +1,41 @@
+AZURE  VPN Gateway:
+VPNs use an encrypted tunnel within another network.
+They're typically deployed to connect two or more trusted private networks to one another over an untrusted network
+
+
+A VPN gateway is a type of virtual network gateway. 
+Azure VPN Gateway instances are deployed in Azure Virtual Network instances and enable the following connectivity:
+
+
+Connect on-premises datacenters to virtual networks through a site-to-site connection.
+Connect individual devices to virtual networks through a point-to-site connection.
+Connect virtual networks to other virtual networks through a network-to-network connection.
+
+
+You can deploy only one VPN gateway in each virtual network,
+ but you can use one gateway to connect to multiple locations, 
+which includes other virtual networks or on-premises datacenters.\
+
+
+When you deploy a VPN Gateway we specify the VPN type:  
+either  policy based or   route based
+diff. between two iis  how  traffic is encrypted. In Azure  bboth type  of  gateway's are used  preshared Keys as only  authentication
+and also rely on  IKE  internet Key Exchangee  and  IPSec
+
+
+POLICY BASED VPN's:
+Policy-based VPN gateways specify statically the IP address of packets that should be encrypted through each tunnel. 
+
+Key features of policy-based VPN gateways in Azure include:
+
+
+Support for IKEv1 only.
+
+
+Use of static routing, where combinations of address prefixes from both networks control how traffic is encrypted and decrypted through the VPN tunnel. The source and destination of the tunneled networks are declared in the policy and don't need to be declared in routing tables.
+
+Policy-based VPNs must be used in specific scenarios that require them, such as for compatibility with legacy on-premises VPN devices.
+
+
+=====================================================================================================================
+Route Based VPN's

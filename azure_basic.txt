@@ -233,5 +233,118 @@ Scale Sets  are something  which create  Identical VM's    using scale up  you c
 
 
 Azure Batch:
+Creates  VM's  as per the requirement an 
+Starts a pool of compute VMs for you.
+Installs applications and staging data.
+Runs jobs with as many tasks as you have.
+Identifies failures.
+Requeues work.
+Scales down the pool as work completes.
 
 
+
+
+When To use  AppService:
+App Service enables you to build and host web apps, background jobs, 
+mobile back-ends, and RESTful APIs in the programming language of your choice without managing infrastructure.
+ It offers automatic scaling and high availability.
+ App Service supports Windows and Linux and enables automated deployments from GitHub, Azure DevOps,
+  or any Git repo to support a continuous deployment model.
+  
+  
+  Azure App Service is  a Paas   which enables you to focus on the Website and the APi Logic
+  
+  
+  Types:
+  Web Apps
+  API Apps
+  Mobile Apps
+  
+  WebJobs
+ 
+ ==========================================================================================================
+ 
+ Decide when the  Containers and Kubernetes  are used :
+ if we want to run multiple instances of  an application in a single host Machine.  then Containerization is good choice
+ 
+ 
+ 
+ Virtual  Machines Virtualize the Hardware  . Containers  virtualize the Operating  System
+ 
+ 
+ Containers are managed through Container Orchestrator 
+ 
+ 
+ There are two ways to  manage  both Docker and   Microsoft based containers.  
+ Azure Container Instances 
+ s. It's a platform as a service (PaaS) offering that allows you to upload your containers, which it runs for you.
+ Azure Kubernetes  Service:
+ The task of automating, managing, and interacting with a large number of containers is known as orchestration. 
+ 
+ Container are managed through Container Orchestrator which can start /stop/scale up  the application instances  as needed
+ 
+
+
+
+Containers are oftenly used to create solutions by using  Microservices architecture  
+
+
+
+
+=========================
+Azure Functions:
+ we have a work to do  that  is  dependent on some other work  
+ Azure Functions are used and called as serverless  computing 
+ it is abstraction of servers infrastructure  and systems
+ 
+ 
+ Serverless  computing includes 
+ Abstraction of servers
+ Event Driven Scale 
+ Micro Billing 
+ 
+ 
+ ====================================
+ Azure has  two implementations  of Serverless Compute 
+ Azure Functions:Functions can execute code in almost any modern language.
+ Azure Logic Apps: Logic apps are designed in a web-based designer and can execute logic triggered by Azure services without writing any code.
+
+
+
+
+When you're concerned only about the code running your service, and not the underlying platform or infrastructure,
+ using Azure Functions is ideal. 
+ 
+ Functions  scale  automatically based on demand
+ 
+ Functiions  can be either stateless or stateful 
+ hen they're stateless (the default), they behave as if they're restarted every time they respond to an event. 
+ When they're stateful (called Durable Functions), a context is passed through the function to track prior activity.
+
+
+
+
+-----------------------------------------------------------------------------------------
+Azure Logic Apps 
+
+these are similar to functions both enables  us to execute logic  based  on event.. the diff is  functions  execute  code/script Logic Apps  execute
+WorkFlows
+
+both are formed from predifined   logic blocks
+ Each time the trigger fires, the Logic Apps engine creates a logic app instance that runs the actions in the workflow
+ 
+ These actions can also include data conversions and flow controls, such as conditional statements, switch statements, loops, and branching.
+ 
+ the work flows  are persisted in JSON
+ 
+ 
+ =============================================================================================================
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ https://docs.microsoft.com/en-gb/learn/modules/azure-compute-fundamentals/azure-functions
+ 
