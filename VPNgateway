@@ -39,3 +39,90 @@ Policy-based VPNs must be used in specific scenarios that require them, such as 
 
 =====================================================================================================================
 Route Based VPN's
+If defining which IP addresses are behind each tunnel is too cumbersome, route-based gateways can be used.
+
+
+with Route based IPSec  are modulated as  Network interfaces  or virtual tunnel interface
+
+IP Routing decides which one of the tunnel interfaces  can be used to  send the each packet 
+
+
+
+Use a route-based VPN gateway if you need any of the following types of connectivity:
+
+Connections between virtual networks
+Point-to-site connections
+Multisite connections
+Coexistence with an Azure ExpressRoute gateway
+
+
+
+Key features of route-based VPN gateways in Azure include:
+
+Supports IKEv2
+Uses any-to-any (wildcard) traffic selectors
+Can use dynamic routing protocols, where routing/forwarding tables direct traffic to different IPSec tunnels 
+
+
+
+
+
+A Basic VPN gateway should only be used for Dev/Test workloads. In addition,
+ it's unsupported to migrate from Basic to the VpnGW1/2/3/Az SKUs at a later time without having to remove the gateway and redeploy.
+ 
+ 
+ 
+ 
+ Before  u  deploy  We need some of the resources  created  with azure  
+ 
+ https://docs.microsoft.com/en-gb/learn/modules/azure-networking-fundamentals/azure-vpn-gateway-fundamentals
+ 
+ 
+ VIRTUAL NETWORK:
+ 
+ 
+ 
+  we need to have VNET  with enouth space , for additional subnet created that is needed for VPN Gateway, Address Space for the VNET must  not
+  overlap with the on-premisis network
+  
+  
+  
+  
+  GATEWAY SUBNET:
+  Deploy  a  subnet called  Gateway Subnet for  VPN Gateway  this canot be used  for the any other services
+  
+  PUBLIC IP  ADDRESS:
+  create  a basic  sku  dynamc public  ip adddress 
+ wich  is used to connect the  to connect  from Datacenter to On Premise  
+ 
+ 
+ LOCAN  NETWORK GATEWAY
+ 
+ VIRTAUL NETWORK  GATEWAY
+ Connection. Create a connection resource to create a logical connection between the VPN gateway and the local network gateway
+ 
+ 
+ 
+ 
+The connection is made to the on-premises VPN device's IPv4 address as defined by the local network gateway.
+The connection is made from the virtual network gateway and its associated public IP address.
+
+
+
+
+
+
+HIGH AVAIILABLITY SCENARIO's:
+
+
+
+ACTIVE/PASSIVE:
+By default, VPN gateways are deployed as two instances in an active/standby configuration
+
+
+
+
+EXPRESS ROUTE  FUNDEMENTALS:
+https://docs.microsoft.com/en-gb/learn/modules/azure-networking-fundamentals/express-route-fundamentals
+
+
