@@ -1,5 +1,6 @@
 
 
+
 Azure Storage:
 Types of storage in the Azure:
 Azure Blob Storage:
@@ -7,3 +8,48 @@ Azure Disk Storage
 Azure Files
 Azure Blob access tiers
 
+
+
+
+
+DISK STORAGE  FUNDEMENTALS:
+Disk Storage provides disks for Azure virtual machines. 
+Applications and other services can access and use these disks as needed, 
+
+Disks  may be from the SSD or VHD
+we can use  standard  SSD and HDD for  less critical workloads, premium SSD's for mission control  production applications and ultra disks for the  data internsive workloads
+ HANA and top tier databases 
+ 
+ 
+ AZURE BLOB STORAGE:
+ 
+ is object storage solution 
+ lob Storage can manage thousands of simultaneous uploads, massive amounts of video data, constantly growing log files, and can be reached from anywhere with an internet connection.
+ 
+ 
+ Blobs aren't limited to common file formats. A
+ 
+ . One advantage of blob storage over disk storage is that it does not require developers to think about or manage disks; 
+ 
+ 
+ data is uploaded as blobs, and Azure takes care of the physical storage needs.
+ 
+ 
+ 
+ You store  blob in containers
+ 
+ 
+ 
+ 
+ AZURE FILES storage:
+ 
+ Azure Files offers fully managed file shares in the cloud that are accessible via the industry standard
+  Server Message Block and Network File System (preview)
+  
+  Azure files can be mounted  not only on cloud but also  with on - prem  of windows  deployments  linux
+  
+  
+ Applications running in Azure virtual machines or cloud services can mount a file storage share to access file data,
+   just as a desktop application would mount a typical SMB share
+   
+   Any no. of  azure virtual machines  can mount  
