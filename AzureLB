@@ -1,0 +1,19 @@
+->Azure LB is Layer 4 Architecture (OSI) Open System Interconnection, it is a single point to the clients
+->Load balancer distributes inbound flows that arrive at the load balancer's front end to backend pool instances
+->A public load balancer can provide outbound connections for virtual machines (VMs) inside your virtual network,
+translating their private IP addresses to public IP addresses
+-> Can be used for  load balancing the VM's
+
+
+Internal or Private Load Balancers:
+Internal Load Balancers  are used where the private IP's  are needed  at the front end Only, these are used to  loadbalance the traffic  inside 
+Virtual Network
+->  LB Support  both inbound and outbound services, it provides  low latency and high throughput 
+Configure outbound connectivity for the azure virtual machines 
+
+Employ port forwarding to access virtual machines
+also support  load balancing for IPV6
+
+move  internal to external loadbalancers across the Azure regions
+
+
